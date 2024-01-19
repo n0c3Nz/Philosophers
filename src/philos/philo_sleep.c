@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 02:57:33 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/19 17:09:13 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/19 17:13:35 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*philo_routine(void *dat)
 	while (philo->data->dead == 0)
 	{
 		if (philo->id % 2 == 0){
-			usleep(500);
+			usleep(700);
 			//usleep(700);
 		}
 		if (eating(philo) == -1)
