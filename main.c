@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 16:18:25 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/15 20:43:00 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/19 02:36:07 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	main(int argc, char **argv)
 	while (i < data->philo_count)
 	{
 		pthread_create(&philo_thread[i], NULL, &philo_routine, (void *)&data->philos[i]);
-		//printf("Thread %d created\n", i + 1);
 		i++;
 	}
 	i = 0;
@@ -57,13 +56,17 @@ int	main(int argc, char **argv)
 		pthread_join(philo_thread[i], NULL);
 		i++;
 	}
+	i = 0;
+	if (data->dead == 1)
+	{
+		while (i < data->philo_count)
+		{
+			pthread_detach(philo_thread[i]);
+			//pthread_mutex_destroy(&data->forks[i]);
+			i++;
+		}
+		pthread_mutex_destroy(&data->print);
+	}
+	printf("All philosophers are full\n");
 	return (0);
 }
-/*
-	printf("philo_count: %d\n", data->philo_count);
-	printf("time_to_die: %d\n", data->time_to_die);
-	printf("time_to_eat: %d\n", data->time_to_eat);
-	printf("time_to_sleep: %d\n", data->time_to_sleep);
-	printf("must_eat_count: %d\n", data->must_eat_count);
-	printf("start: %ld\n", data->start);
-*/

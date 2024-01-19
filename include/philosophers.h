@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philosophers.h                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
+/*   Updated: 2024/01/19 02:34:16 by guortun-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
@@ -33,7 +45,6 @@ typedef struct s_philo
 	int				last_eat;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
-	pthread_mutex_t	*print;
 	struct s_data	*data;
 }				t_philo;
 
@@ -62,6 +73,12 @@ int			error(char *str);
 long int	get_time(void);
 t_data		*init_data(int argc, char **argv);
 void		*philo_routine(void *date);
+/*		PHILOS ACTIONS		*/
 int			sleeping(t_philo *philo);
 int			eating(t_philo *philo);
+int			thinking(t_philo *philo);
+int			dead(t_philo *philo);
+void		powernap(int ms);
+/*		TESTS		*/
+
 # endif

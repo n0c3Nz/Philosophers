@@ -1,8 +1,8 @@
 NAME = Philosophers
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-LFLAGS =
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=thread
+LFLAGS = -Iinclude -lpthread
 
 SRC = main.c \
 	  ./src/basic/basic_funcs.c \

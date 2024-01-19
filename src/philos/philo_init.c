@@ -4,17 +4,28 @@ long int get_time(void)
 {
 	struct timeval tiempo;
 
-	return (gettimeofday(&tiempo, NULL), tiempo.tv_usec);
+	return (gettimeofday(&tiempo, NULL),
+		(tiempo.tv_usec / 1000) + (tiempo.tv_sec * 1000));
 }
+
 static void		set_forks(t_data *data)
 {
 	int i = 0;
+
+	if (data->philo_count < 2)
+	{
+		pthread_mutex_init(&data->forks[0], NULL);
+		pthread_mutex_init(&data->forks[1], NULL);
+		return ;
+	}
 	while (i < data->philo_count)
 	{
 		pthread_mutex_init(&data->forks[i], NULL);
 		i++;
 	}
+	i = 0;
 }
+
 static void 	set_philos(t_data *data)
 {
 	int i = 0;
@@ -25,8 +36,10 @@ static void 	set_philos(t_data *data)
 		data->philos[i].eat_count = 0;
 		data->philos[i].last_eat = data->start;
 		data->philos[i].left_fork = &data->forks[i];
-		data->philos[i].right_fork = &data->forks[(i + 1) % data->philo_count];
-		data->philos[i].print = &data->print;
+		if (data->philo_count < 2)
+			data->philos[i].right_fork = &data->forks[i + 1];
+		else
+			data->philos[i].right_fork = &data->forks[(i + 1) % data->philo_count];
 		data->philos[i].data = data;
 		i++;
 	}
@@ -45,7 +58,10 @@ t_data *init_data(int argc, char **argv)
 	data->dead = 0;
 	data->full_philos = -1;
 	data->start = get_time();
-	data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
+	if (data->philo_count < 2)
+		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * (data->philo_count + 1));
+	else
+		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
 	data->philos = (t_philo *)malloc(sizeof(t_philo) * data->philo_count);
 	pthread_mutex_init(&data->print, NULL);
 	set_forks(data);
