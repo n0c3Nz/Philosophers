@@ -1,4 +1,16 @@
-#include "../../include/philosophers.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 18:50:17 by guortun-          #+#    #+#             */
+/*   Updated: 2024/01/19 19:03:27 by guortun-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "philosophers.h"
 
 long int get_time(void)
 {
@@ -48,6 +60,8 @@ t_data *init_data(int argc, char **argv)
 {
 	t_data *data;
 	data = (t_data *)malloc(sizeof(t_data));
+	if (!data)
+		error("Malloc failed\n");
 	data->philo_count = ft_atoi(argv[1]);// Número de philos
 	data->time_to_die = ft_atoi(argv[2]);// Tiempo de muerte
 	data->time_to_eat = ft_atoi(argv[3]);// Tiempo de comer
@@ -59,10 +73,20 @@ t_data *init_data(int argc, char **argv)
 	data->full_philos = -1;
 	data->start = get_time();
 	if (data->philo_count < 2)
+	{
 		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * (data->philo_count + 1));
+		if (!data->forks)
+			error("Malloc failed\n");
+	}
 	else
+	{
 		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
+		if (!data->forks)
+			error("Malloc failed\n");
+	}
 	data->philos = (t_philo *)malloc(sizeof(t_philo) * data->philo_count);
+	if (!data->philos)
+		error("Malloc failed\n");
 	pthread_mutex_init(&data->print, NULL);
 	set_forks(data);
 	set_philos(data);

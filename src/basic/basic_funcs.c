@@ -6,11 +6,11 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 16:33:35 by guortun-          #+#    #+#             */
-/*   Updated: 2023/12/29 16:43:44 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/19 18:50:26 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/philosophers.h"
+# include "philosophers.h"
 
 int	error(char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 02:57:33 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/19 17:15:16 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/22 00:11:22 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/philosophers.h"
+#include "philosophers.h"
 
 void	*philo_routine(void *dat)
 {
@@ -48,10 +48,8 @@ int	sleeping(t_philo *philo)
 	if (!(dead(philo)))
 	{
 		//pthread_mutex_unlock(&philo->data->print);
-		pthread_mutex_lock(&philo->data->print);
 		philo->state = SLEEP;
 		ms = (get_time() - philo->data->start);
-		pthread_mutex_unlock(&philo->data->print);
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d is sleeping\n", ms, philo->id);
 		pthread_mutex_unlock(&philo->data->print);
@@ -68,13 +66,13 @@ int	eating(t_philo *philo)
 
 	if (!(dead(philo)))
 	{
-		pthread_mutex_lock(philo->left_fork);
 		pthread_mutex_lock(philo->right_fork);
+		pthread_mutex_lock(philo->left_fork);
 		ms = (get_time() - philo->data->start);
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
-		pthread_mutex_unlock(&philo->data->print);
-		pthread_mutex_lock(&philo->data->print);
+		//pthread_mutex_unlock(&philo->data->print);
+		//pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
 		pthread_mutex_unlock(&philo->data->print);
 		philo->state = EAT;
@@ -83,8 +81,8 @@ int	eating(t_philo *philo)
 		pthread_mutex_unlock(&philo->data->print);
 		philo->last_eat = get_time() - philo->data->start;
 		powernap(philo->data->time_to_eat);
-		pthread_mutex_unlock(philo->left_fork);
 		pthread_mutex_unlock(philo->right_fork);
+		pthread_mutex_unlock(philo->left_fork);
 		return (0);
 	}
 	return (-1);
@@ -132,6 +130,10 @@ int	dead(t_philo *philo)
 	}
 	return (0);
 }
-//!TODO: Comprobar por qué son diferentes los siguientes valores:
+//!TODO: Comprobar por qué son diferentes los siguientes valores: ✅
 // ./Philosophers 4 700 500 200 (añade + 100 ms delay en la muerte)
 // ./Philosophers 4 700 200 500 (no añade delay en la muerte)
+//~> Era porque tenía mal el orden de los mutex en algunas funciones.
+//~> Ahora ya no hay delay en la muerte. Sí, si que hay xdd.
+//!TODO: Desarrollar el flow con la variable must_eat_count
+//!TODO: Mirar los detach, los mutex destroy y los mallocs. (mira frees también) ✅
