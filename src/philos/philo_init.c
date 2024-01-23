@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:50:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/19 19:03:27 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:47:38 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ t_data *init_data(int argc, char **argv)
 	if (!data->philos)
 		error("Malloc failed\n");
 	pthread_mutex_init(&data->print, NULL);
+	pthread_mutex_init(&data->dead_mutex, NULL);
 	set_forks(data);
 	set_philos(data);
 	return (data);
