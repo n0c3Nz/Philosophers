@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 18:50:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 17:32:57 by guortun-         ###   ########.fr       */
+/*   Created: 2024/01/24 18:11:54 by guortun-          #+#    #+#             */
+/*   Updated: 2024/01/24 19:12:23 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-long int get_time(void)
+long int	get_time(void)
 {
-	struct timeval tiempo;
+	struct timeval	tiempo;
 
 	return (gettimeofday(&tiempo, NULL),
 		(tiempo.tv_usec / 1000) + (tiempo.tv_sec * 1000));
 }
 
-static void		set_forks(t_data *data)
+static void	set_forks(t_data *data)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	while (i < data->philo_count)
 	{
 		pthread_mutex_init(&data->forks[i], NULL);
@@ -32,9 +33,11 @@ static void		set_forks(t_data *data)
 	i = 0;
 }
 
-static void 	set_philos(t_data *data)
+static void	set_philos(t_data *data)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (i < data->philo_count)
 	{
 		data->philos[i].id = i + 1;
@@ -46,23 +49,26 @@ static void 	set_philos(t_data *data)
 		i++;
 	}
 }
-t_data *init_data(int argc, char **argv)
+
+t_data	*init_data(int argc, char **argv)
 {
-	t_data *data;
+	t_data	*data;
+
 	data = (t_data *)malloc(sizeof(t_data));
 	if (!data)
 		error("Malloc failed\n");
-	data->philo_count = ft_atoi(argv[1]);// Número de philos
-	data->time_to_die = ft_atoi(argv[2]);// Tiempo de muerte
-	data->time_to_eat = ft_atoi(argv[3]);// Tiempo de comer
-	data->time_to_sleep = ft_atoi(argv[4]);// Tiempo de dormir
+	data->philo_count = ft_atoi(argv[1]);
+	data->time_to_die = ft_atoi(argv[2]);
+	data->time_to_eat = ft_atoi(argv[3]);
+	data->time_to_sleep = ft_atoi(argv[4]);
 	data->must_eat_count = -1;
 	if (argc == 6)
 		data->must_eat_count = ft_atoi(argv[5]);
 	data->dead = 0;
 	data->full_philos = -1;
 	data->start = get_time();
-	data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
+	data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t)
+			* data->philo_count);
 	if (!data->forks)
 		error("Malloc failed\n");
 	data->philos = (t_philo *)malloc(sizeof(t_philo) * data->philo_count);
@@ -70,7 +76,5 @@ t_data *init_data(int argc, char **argv)
 		error("Malloc failed\n");
 	pthread_mutex_init(&data->print, NULL);
 	pthread_mutex_init(&data->dead_mutex, NULL);
-	set_forks(data);
-	set_philos(data);
-	return (data);
+	return (set_forks(data), set_philos(data), data);
 }

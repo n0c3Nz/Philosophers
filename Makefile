@@ -7,7 +7,11 @@ LFLAGS = -lpthread
 SRC = main.c \
 	  ./src/basic/basic_funcs.c \
 	  ./src/philos/philo_init.c \
-	  ./src/philos/philo_sleep.c
+	  ./src/philos/philo_sleep.c \
+	  ./src/philos/philo_eat.c \
+	  ./src/philos/philo_think.c \
+	  ./src/philos/philo_dead.c \
+	  ./src/philos/philo_routine.c
 
 OBJ = $(SRC:.c=.o)
 

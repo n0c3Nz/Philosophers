@@ -6,11 +6,11 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 17:32:50 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:07:38 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHILOSOPHERS_H
+#ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
 # include <pthread.h>
@@ -34,9 +34,6 @@
 # define CYAN "\033[0;36m"
 # define RESET "\033[0m"
 
-#define DEBUG_TRACE_ENTER printf("Entrando a la función %s\n", __func__);
-#define DEBUG_TRACE_EXIT printf("Saliendo de la función %s\n", __func__);
-
 typedef struct s_philo
 {
 	int				id;
@@ -59,7 +56,7 @@ typedef struct s_data
 	long int		start;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	print;
-	pthread_mutex_t dead_mutex;
+	pthread_mutex_t	dead_mutex;
 	t_philo			*philos;
 }				t_data;
 
@@ -82,4 +79,4 @@ int			dead(t_philo *philo);
 void		powernap(int ms);
 /*		TESTS		*/
 
-# endif
+#endif

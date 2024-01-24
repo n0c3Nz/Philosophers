@@ -6,11 +6,11 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 16:33:35 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/19 18:50:26 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:17:55 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "philosophers.h"
+#include "philosophers.h"
 
 int	error(char *str)
 {
@@ -28,7 +28,7 @@ ssize_t	ft_strlen(const char *str)
 	return (i);
 }
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
