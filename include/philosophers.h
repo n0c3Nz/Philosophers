@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/22 20:46:47 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:32:50 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@
 typedef struct s_philo
 {
 	int				id;
-	int				state;
 	int				eat_count;
 	int				last_eat;
 	pthread_mutex_t	*left_fork;

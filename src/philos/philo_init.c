@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:50:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:00:27 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:32:57 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static void 	set_philos(t_data *data)
 	while (i < data->philo_count)
 	{
 		data->philos[i].id = i + 1;
-		data->philos[i].state = THINK;
 		data->philos[i].eat_count = 0;
 		data->philos[i].last_eat = data->start;
 		data->philos[i].left_fork = &data->forks[i];

@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 16:18:25 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:04:27 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:30:19 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	i = 0;
-	/*if (data->dead == 1)
-	{*/
 	while (i < data->philo_count)
 	{
 		//pthread_detach(philo_thread[i]);
@@ -68,7 +66,6 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	pthread_mutex_destroy(&data->print);
-	//}
 	printf("All philosophers are full\n");
 	return (0);
 }

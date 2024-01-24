@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 02:57:33 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 16:02:03 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:32:27 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	*philo_routine(void *dat)
 
 	while (philo->data->dead == 0 && is_eat_count(philo) == 0)
 	{
-		//printf("is_eat_count(philo) %d\n", is_eat_count(philo));
-		//printf("philo->data->dead %d\n", philo->data->dead);
 		if (philo->data->philo_count % 2 == 0 && philo->id % 2 == 0)
 			usleep(300);
 		else if (philo->data->philo_count % 2 != 0 && philo->id % 2 == 0 && philo->id != 1)
@@ -66,7 +64,6 @@ int	sleeping(t_philo *philo)
 
 	if (!(dead(philo)))
 	{
-		philo->state = SLEEP;
 		ms = (get_time() - philo->data->start);
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d is sleeping\n", ms, philo->id);
@@ -92,7 +89,6 @@ int	eating(t_philo *philo)
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
-		philo->state = EAT;
 		printf("%ldms\t%d is eating\n", ms, philo->id);
 		pthread_mutex_unlock(&philo->data->print);
 		philo->last_eat = get_time() - philo->data->start;
@@ -114,7 +110,6 @@ int	thinking(t_philo *philo)
 
 	if (!(dead(philo)))
 	{
-		philo->state = THINK;
 		ms = (get_time() - philo->data->start);
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d is thinking\n", ms, philo->id);
@@ -142,7 +137,6 @@ int	dead(t_philo *philo)
 		pthread_mutex_lock(&philo->data->dead_mutex);
 		philo->data->dead = 1;
 		pthread_mutex_unlock(&philo->data->dead_mutex);
-		philo->state = DEAD;
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d died\n", ms, philo->id);
 		pthread_mutex_unlock(&philo->data->print);
