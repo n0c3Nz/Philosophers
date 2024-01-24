@@ -11,7 +11,7 @@ NC='\033[0m' # No Color
 #./Philosophers 100 800 400 401 | grep "died" && echo "----"
 is_philo=$(ls | grep "Philosophers")
 if [ -z "$is_philo" ]; then
-    echo "Philosophers executable not found"
+    echo -e "$RED$BOLD \rPhilosophers executable not found$NC"
     exit 1
 fi
 
