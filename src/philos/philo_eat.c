@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:35:22 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 18:14:44 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 19:43:22 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int	eating(t_philo *philo)
 {
 	int long	ms;
 
+	ms = (get_time() - philo->data->start);
 	if (!(dead(philo)))
 	{
 		pthread_mutex_lock(philo->right_fork);
 		pthread_mutex_lock(philo->left_fork);
-		ms = (get_time() - philo->data->start);
 		pthread_mutex_lock(&philo->data->print);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
 		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
