@@ -7,14 +7,13 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
-# Test para comprobar número de filósofos DIED por ejecución
-#./Philosophers 100 800 400 401 | grep "died" && echo "----"
+# Test para comprobar retraso en la muerte de un filósofo y cuantos filósofos mueren
+
 is_philo=$(ls | grep "Philosophers")
 if [ -z "$is_philo" ]; then
     echo -e "$RED$BOLD \rPhilosophers executable not found$NC"
     exit 1
 fi
-
 
 random_commands=(
     "./Philosophers 100 800 400 401 | grep 'died'"
@@ -30,13 +29,13 @@ random_commands=(
 moreat_commands=(
 	"./Philosophers 6 800 501 301 | grep 'died'"
 	"./Philosophers 5 800 501 300 | grep 'died'"
-	"./Philosophers 23 800 601 200 | grep 'died'"
-	"./Philosophers 60 800 601 200 | grep 'died'"
+	"./Philosophers 23 300 201 99 | grep 'died'"
+	"./Philosophers 60 400 301 99 | grep 'died'"
 )
 moresleep_commands=(
 	"./Philosophers 6 800 300 501 | grep 'died'"
-	"./Philosophers 5 800 300 501 | grep 'died'"
-	"./Philosophers 23 900 200 701 | grep 'died'"
+	"./Philosophers 5 700 200 501 | grep 'died'"
+	"./Philosophers 23 500 99 401 | grep 'died'"
 	"./Philosophers 60 900 200 701 | grep 'died'"
 )
 #for command in "${commands[@]}"; do
