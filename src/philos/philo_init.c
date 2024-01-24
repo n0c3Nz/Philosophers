@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:50:17 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/22 20:47:38 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:00:27 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ static void		set_forks(t_data *data)
 {
 	int i = 0;
 
-	if (data->philo_count < 2)
-	{
-		pthread_mutex_init(&data->forks[0], NULL);
-		pthread_mutex_init(&data->forks[1], NULL);
-		return ;
-	}
 	while (i < data->philo_count)
 	{
 		pthread_mutex_init(&data->forks[i], NULL);
@@ -48,10 +42,7 @@ static void 	set_philos(t_data *data)
 		data->philos[i].eat_count = 0;
 		data->philos[i].last_eat = data->start;
 		data->philos[i].left_fork = &data->forks[i];
-		if (data->philo_count < 2)
-			data->philos[i].right_fork = &data->forks[i + 1];
-		else
-			data->philos[i].right_fork = &data->forks[(i + 1) % data->philo_count];
+		data->philos[i].right_fork = &data->forks[(i + 1) % data->philo_count];
 		data->philos[i].data = data;
 		i++;
 	}
@@ -72,18 +63,9 @@ t_data *init_data(int argc, char **argv)
 	data->dead = 0;
 	data->full_philos = -1;
 	data->start = get_time();
-	if (data->philo_count < 2)
-	{
-		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * (data->philo_count + 1));
-		if (!data->forks)
-			error("Malloc failed\n");
-	}
-	else
-	{
-		data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
-		if (!data->forks)
-			error("Malloc failed\n");
-	}
+	data->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * data->philo_count);
+	if (!data->forks)
+		error("Malloc failed\n");
 	data->philos = (t_philo *)malloc(sizeof(t_philo) * data->philo_count);
 	if (!data->philos)
 		error("Malloc failed\n");

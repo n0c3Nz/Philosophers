@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 02:57:33 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/23 00:58:04 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:02:03 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	is_eat_count(t_philo *philo)
 		else
 			return(1);
 	}
+	//printf("must_eat_count %d eat_count: %d\n", philo->data->must_eat_count, philo->eat_count);
 	return(0);
 }
 
@@ -29,11 +30,14 @@ void	*philo_routine(void *dat)
 	t_philo	*philo;
 
 	philo = (t_philo *)dat;
+
 	while (philo->data->dead == 0 && is_eat_count(philo) == 0)
 	{
+		//printf("is_eat_count(philo) %d\n", is_eat_count(philo));
+		//printf("philo->data->dead %d\n", philo->data->dead);
 		if (philo->data->philo_count % 2 == 0 && philo->id % 2 == 0)
 			usleep(300);
-		else if (philo->data->philo_count % 2 != 0 && philo->id % 2 != 0 && philo->id != 1)
+		else if (philo->data->philo_count % 2 != 0 && philo->id % 2 == 0 && philo->id != 1)
 			usleep(300);
 		if (eating(philo) == -1)
 			break ;		
@@ -82,28 +86,24 @@ int	eating(t_philo *philo)
 	{
 		pthread_mutex_lock(philo->right_fork);
 		pthread_mutex_lock(philo->left_fork);
-		if (!(dead(philo)))
-		{
-			ms = (get_time() - philo->data->start);
-			pthread_mutex_lock(&philo->data->print);
-			printf("%ldms\t%d has taken a fork\n", ms, philo->id);
-			//pthread_mutex_unlock(&philo->data->print);
-			//pthread_mutex_lock(&philo->data->print);
-			printf("%ldms\t%d has taken a fork\n", ms, philo->id);
-			pthread_mutex_unlock(&philo->data->print);
-			philo->state = EAT;
-			pthread_mutex_lock(&philo->data->print);
-			printf("%ldms\t%d is eating\n", ms, philo->id);
-			pthread_mutex_unlock(&philo->data->print);
-			powernap(philo->data->time_to_eat);
-			philo->last_eat = get_time() - philo->data->start;
-			philo->eat_count++;
-			pthread_mutex_unlock(philo->right_fork);
-			pthread_mutex_unlock(philo->left_fork);
-			return (0);
-		}
+		//if (!(dead(philo)))
+		//{
+		ms = (get_time() - philo->data->start);
+		pthread_mutex_lock(&philo->data->print);
+		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
+		printf("%ldms\t%d has taken a fork\n", ms, philo->id);
+		philo->state = EAT;
+		printf("%ldms\t%d is eating\n", ms, philo->id);
+		pthread_mutex_unlock(&philo->data->print);
+		philo->last_eat = get_time() - philo->data->start;
+		powernap(philo->data->time_to_eat);
+		philo->eat_count++;
 		pthread_mutex_unlock(philo->right_fork);
 		pthread_mutex_unlock(philo->left_fork);
+		return (0);
+		//}
+		//pthread_mutex_unlock(philo->right_fork);
+		//pthread_mutex_unlock(philo->left_fork);
 	}
 	return (-1);
 }
@@ -162,3 +162,5 @@ int	dead(t_philo *philo)
 // NUMEROS PARES E IMPARES
 // SI EL PRIMERO ES MAS GRANDE HACE BIEN LOS PARES (60 ms de diff maximo) y hace bien impares con +70ms de diff
 // SI EL SEGUNDO ES MAS GRANDE
+
+// Tomar el last eat despues de powenap y luego hacer la resta de ms para que se printee correctamente.

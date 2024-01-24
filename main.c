@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 16:18:25 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/22 21:08:50 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:04:27 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	main(int argc, char **argv)
 
 	if (!are_digits(argc, argv))
 		return (error("Bad arguments"));
+	if (ft_atoi(argv[1]) < 2)
+		return (error("One Philosopher can't eat alone"));
 	data = init_data(argc, argv);
 	pthread_t philo_thread[data->philo_count];
 	int i = 0;
