@@ -1,625 +1,96 @@
-0ms	1 has taken a fork
-0ms	1 has taken a fork
-0ms	1 is eating
-0ms	3 has taken a fork
-0ms	3 has taken a fork
-0ms	3 is eating
-0ms	5 has taken a fork
-0ms	5 has taken a fork
-0ms	5 is eating
-0ms	7 has taken a fork
-0ms	7 has taken a fork
-0ms	7 is eating
-0ms	9 has taken a fork
-0ms	9 has taken a fork
-0ms	9 is eating
-0ms	11 has taken a fork
-0ms	11 has taken a fork
-0ms	11 is eating
-0ms	13 has taken a fork
-0ms	13 has taken a fork
-0ms	13 is eating
-0ms	15 has taken a fork
-0ms	15 has taken a fork
-0ms	15 is eating
-0ms	17 has taken a fork
-0ms	17 has taken a fork
-0ms	17 is eating
-0ms	19 has taken a fork
-0ms	19 has taken a fork
-0ms	19 is eating
-1ms	21 has taken a fork
-1ms	21 has taken a fork
-1ms	21 is eating
-1ms	23 has taken a fork
-1ms	23 has taken a fork
-1ms	23 is eating
-1ms	25 has taken a fork
-1ms	25 has taken a fork
-1ms	25 is eating
-1ms	27 has taken a fork
-1ms	27 has taken a fork
-1ms	27 is eating
-1ms	29 has taken a fork
-1ms	29 has taken a fork
-1ms	29 is eating
-1ms	31 has taken a fork
-1ms	31 has taken a fork
-1ms	31 is eating
-1ms	33 has taken a fork
-1ms	33 has taken a fork
-1ms	33 is eating
-1ms	35 has taken a fork
-1ms	35 has taken a fork
-1ms	35 is eating
-1ms	37 has taken a fork
-1ms	37 has taken a fork
-1ms	37 is eating
-1ms	39 has taken a fork
-1ms	39 has taken a fork
-1ms	39 is eating
-1ms	41 has taken a fork
-1ms	41 has taken a fork
-1ms	41 is eating
-1ms	43 has taken a fork
-1ms	43 has taken a fork
-1ms	43 is eating
-1ms	45 has taken a fork
-1ms	45 has taken a fork
-1ms	45 is eating
-1ms	47 has taken a fork
-1ms	47 has taken a fork
-1ms	47 is eating
-1ms	49 has taken a fork
-1ms	49 has taken a fork
-1ms	49 is eating
-1ms	51 has taken a fork
-1ms	51 has taken a fork
-1ms	51 is eating
-1ms	53 has taken a fork
-1ms	53 has taken a fork
-1ms	53 is eating
-1ms	55 has taken a fork
-1ms	55 has taken a fork
-1ms	55 is eating
-1ms	57 has taken a fork
-1ms	57 has taken a fork
-1ms	57 is eating
-1ms	59 has taken a fork
-1ms	59 has taken a fork
-1ms	59 is eating
-1ms	61 has taken a fork
-1ms	61 has taken a fork
-1ms	61 is eating
-1ms	63 has taken a fork
-1ms	63 has taken a fork
-1ms	63 is eating
-1ms	65 has taken a fork
-1ms	65 has taken a fork
-1ms	65 is eating
-1ms	67 has taken a fork
-1ms	67 has taken a fork
-1ms	67 is eating
-1ms	69 has taken a fork
-1ms	69 has taken a fork
-1ms	69 is eating
-1ms	71 has taken a fork
-1ms	71 has taken a fork
-1ms	71 is eating
-1ms	73 has taken a fork
-1ms	73 has taken a fork
-1ms	73 is eating
-1ms	75 has taken a fork
-1ms	75 has taken a fork
-1ms	75 is eating
-1ms	77 has taken a fork
-1ms	77 has taken a fork
-1ms	77 is eating
-1ms	79 has taken a fork
-1ms	79 has taken a fork
-1ms	79 is eating
-1ms	81 has taken a fork
-1ms	81 has taken a fork
-1ms	81 is eating
-1ms	83 has taken a fork
-1ms	83 has taken a fork
-1ms	83 is eating
-1ms	85 has taken a fork
-1ms	85 has taken a fork
-1ms	85 is eating
-1ms	87 has taken a fork
-1ms	87 has taken a fork
-1ms	87 is eating
-1ms	89 has taken a fork
-1ms	89 has taken a fork
-1ms	89 is eating
-2ms	91 has taken a fork
-2ms	91 has taken a fork
-2ms	91 is eating
-2ms	93 has taken a fork
-2ms	93 has taken a fork
-2ms	93 is eating
-2ms	95 has taken a fork
-2ms	95 has taken a fork
-2ms	95 is eating
-2ms	97 has taken a fork
-2ms	97 has taken a fork
-2ms	97 is eating
-2ms	99 has taken a fork
-2ms	99 has taken a fork
-2ms	99 is eating
-400ms	1 is sleeping
-400ms	7 is sleeping
-400ms	19 is sleeping
-400ms	5 is sleeping
-400ms	11 is sleeping
-400ms	17 is sleeping
-400ms	9 is sleeping
-400ms	15 is sleeping
-400ms	4 has taken a fork
-400ms	4 has taken a fork
-400ms	4 is eating
-400ms	14 has taken a fork
-400ms	14 has taken a fork
-400ms	14 is eating
-400ms	2 has taken a fork
-400ms	2 has taken a fork
-400ms	2 is eating
-400ms	3 is sleeping
-400ms	6 has taken a fork
-400ms	6 has taken a fork
-400ms	6 is eating
-400ms	18 has taken a fork
-400ms	16 has taken a fork
-400ms	13 is sleeping
-400ms	16 has taken a fork
-400ms	16 is eating
-400ms	8 has taken a fork
-400ms	8 has taken a fork
-400ms	8 is eating
-400ms	12 has taken a fork
-400ms	12 has taken a fork
-400ms	12 is eating
-400ms	10 has taken a fork
-400ms	10 has taken a fork
-400ms	10 is eating
-400ms	18 has taken a fork
-400ms	18 is eating
-401ms	47 is sleeping
-401ms	29 is sleeping
-401ms	52 has taken a fork
-401ms	52 has taken a fork
-401ms	52 is eating
-401ms	39 is sleeping
-401ms	69 is sleeping
-401ms	81 is sleeping
-401ms	62 has taken a fork
-401ms	62 has taken a fork
-401ms	62 is eating
-401ms	59 is sleeping
-401ms	83 is sleeping
-401ms	45 is sleeping
-401ms	23 is sleeping
-401ms	58 has taken a fork
-401ms	58 has taken a fork
-401ms	58 is eating
-401ms	32 has taken a fork
-401ms	32 has taken a fork
-401ms	32 is eating
-401ms	78 has taken a fork
-401ms	78 has taken a fork
-401ms	78 is eating
-401ms	72 has taken a fork
-401ms	72 has taken a fork
-401ms	72 is eating
-401ms	38 has taken a fork
-401ms	38 has taken a fork
-401ms	38 is eating
-401ms	88 has taken a fork
-401ms	88 has taken a fork
-401ms	88 is eating
-401ms	54 has taken a fork
-401ms	54 has taken a fork
-401ms	54 is eating
-401ms	86 has taken a fork
-401ms	86 has taken a fork
-401ms	86 is eating
-401ms	80 has taken a fork
-401ms	80 has taken a fork
-401ms	80 is eating
-401ms	66 has taken a fork
-401ms	66 has taken a fork
-401ms	66 is eating
-401ms	48 has taken a fork
-401ms	48 has taken a fork
-401ms	48 is eating
-401ms	50 has taken a fork
-401ms	50 has taken a fork
-401ms	50 is eating
-401ms	20 has taken a fork
-401ms	20 has taken a fork
-401ms	20 is eating
-401ms	22 has taken a fork
-401ms	22 has taken a fork
-401ms	22 is eating
-401ms	42 has taken a fork
-401ms	42 has taken a fork
-401ms	42 is eating
-401ms	44 has taken a fork
-401ms	44 has taken a fork
-401ms	44 is eating
-401ms	34 has taken a fork
-401ms	34 has taken a fork
-401ms	34 is eating
-401ms	68 has taken a fork
-401ms	68 has taken a fork
-401ms	68 is eating
-401ms	56 has taken a fork
-401ms	56 has taken a fork
-401ms	56 is eating
-401ms	64 has taken a fork
-401ms	64 has taken a fork
-401ms	64 is eating
-401ms	74 has taken a fork
-401ms	74 has taken a fork
-401ms	74 is eating
-401ms	26 has taken a fork
-401ms	26 has taken a fork
-401ms	26 is eating
-401ms	36 has taken a fork
-401ms	36 has taken a fork
-401ms	36 is eating
-401ms	89 is sleeping
-401ms	51 is sleeping
-401ms	61 is sleeping
-401ms	57 is sleeping
-401ms	31 is sleeping
-401ms	77 is sleeping
-401ms	71 is sleeping
-401ms	70 has taken a fork
-401ms	70 has taken a fork
-401ms	70 is eating
-401ms	37 is sleeping
-401ms	87 is sleeping
-401ms	82 has taken a fork
-401ms	82 has taken a fork
-401ms	82 is eating
-401ms	53 is sleeping
-401ms	85 is sleeping
-401ms	79 is sleeping
-401ms	49 is sleeping
-401ms	41 is sleeping
-401ms	60 has taken a fork
-401ms	60 has taken a fork
-401ms	60 is eating
-401ms	43 is sleeping
-401ms	33 is sleeping
-401ms	27 is sleeping
-401ms	67 is sleeping
-401ms	30 has taken a fork
-401ms	30 has taken a fork
-401ms	46 has taken a fork
-401ms	46 has taken a fork
-401ms	46 is eating
-401ms	75 is sleeping
-401ms	35 is sleeping
-401ms	25 is sleeping
-401ms	28 has taken a fork
-401ms	40 has taken a fork
-401ms	65 is sleeping
-401ms	21 is sleeping
-401ms	30 is eating
-401ms	24 has taken a fork
-401ms	76 has taken a fork
-401ms	76 has taken a fork
-401ms	24 has taken a fork
-401ms	24 is eating
-401ms	76 is eating
-401ms	40 has taken a fork
-401ms	40 is eating
-401ms	28 has taken a fork
-401ms	28 is eating
-401ms	73 is sleeping
-401ms	55 is sleeping
-401ms	84 has taken a fork
-401ms	84 has taken a fork
-401ms	84 is eating
-401ms	63 is sleeping
-402ms	93 is sleeping
-402ms	97 is sleeping
-402ms	91 is sleeping
-402ms	90 has taken a fork
-402ms	90 has taken a fork
-402ms	90 is eating
-402ms	92 has taken a fork
-402ms	92 has taken a fork
-402ms	92 is eating
-402ms	95 is sleeping
-402ms	94 has taken a fork
-402ms	94 has taken a fork
-402ms	94 is eating
-402ms	96 has taken a fork
-402ms	96 has taken a fork
-402ms	96 is eating
-402ms	99 is sleeping
-402ms	98 has taken a fork
-402ms	98 has taken a fork
-402ms	98 is eating
-402ms	100 has taken a fork
-402ms	100 has taken a fork
-402ms	100 is eating
-800ms	16 is sleeping
-800ms	11 is thinking
-800ms	3 is thinking
-800ms	6 is sleeping
-800ms	15 is thinking
-800ms	15 has taken a fork
-800ms	15 has taken a fork
-800ms	15 is eating
-800ms	14 is sleeping
-800ms	8 is sleeping
-800ms	9 is thinking
-800ms	18 is sleeping
-800ms	1 is thinking
-800ms	2 is sleeping
-800ms	19 is thinking
-800ms	17 is thinking
-800ms	17 has taken a fork
-800ms	17 has taken a fork
-800ms	17 is eating
-800ms	4 is sleeping
-800ms	10 is sleeping
-800ms	7 is thinking
-800ms	3 has taken a fork
-800ms	7 has taken a fork
-800ms	13 is thinking
-800ms	13 has taken a fork
-800ms	13 has taken a fork
-800ms	7 has taken a fork
-800ms	3 has taken a fork
-800ms	7 is eating
-800ms	9 has taken a fork
-800ms	11 has taken a fork
-800ms	9 has taken a fork
-800ms	12 is sleeping
-800ms	11 has taken a fork
-800ms	11 is eating
-800ms	9 is eating
-800ms	3 is eating
-800ms	5 is thinking
-800ms	5 has taken a fork
-800ms	5 has taken a fork
-800ms	5 is eating
-800ms	13 is eating
-801ms	23 is thinking
-801ms	74 is sleeping
-801ms	35 is thinking
-801ms	32 is sleeping
-801ms	27 is thinking
-801ms	59 is thinking
-801ms	40 is sleeping
-801ms	26 is sleeping
-801ms	55 is thinking
-801ms	83 is thinking
-801ms	53 is thinking
-801ms	22 is sleeping
-801ms	24 is sleeping
-801ms	84 is sleeping
-801ms	58 is sleeping
-801ms	25 is thinking
-801ms	50 is sleeping
-801ms	41 is thinking
-801ms	47 is thinking
-801ms	60 is sleeping
-801ms	73 is thinking
-801ms	89 is thinking
-801ms	43 is thinking
-801ms	23 has taken a fork
-801ms	59 has taken a fork
-801ms	23 has taken a fork
-801ms	23 is eating
-801ms	59 has taken a fork
-801ms	25 has taken a fork
-801ms	25 has taken a fork
-801ms	42 is sleeping
-801ms	41 has taken a fork
-801ms	41 has taken a fork
-801ms	41 is eating
-801ms	59 is eating
-801ms	25 is eating
-801ms	76 is sleeping
-801ms	48 is sleeping
-801ms	81 is thinking
-801ms	79 is thinking
-801ms	49 is thinking
-801ms	49 has taken a fork
-801ms	49 has taken a fork
-801ms	49 is eating
-801ms	36 is sleeping
-801ms	61 is thinking
-801ms	63 is thinking
-801ms	77 is thinking
-801ms	52 is sleeping
-801ms	87 is thinking
-801ms	75 is thinking
-801ms	75 has taken a fork
-801ms	75 has taken a fork
-801ms	75 is eating
-801ms	51 is thinking
-801ms	51 has taken a fork
-801ms	51 has taken a fork
-801ms	51 is eating
-801ms	30 is sleeping
-801ms	57 is thinking
-801ms	64 is sleeping
-801ms	37 is thinking
-801ms	70 is sleeping
-801ms	62 is sleeping
-801ms	39 is thinking
-801ms	61 has taken a fork
-801ms	61 has taken a fork
-801ms	61 is eating
-801ms	63 has taken a fork
-801ms	63 has taken a fork
-801ms	63 is eating
-801ms	56 is sleeping
-801ms	38 is sleeping
-801ms	39 has taken a fork
-801ms	33 is thinking
-801ms	71 is thinking
-801ms	39 has taken a fork
-801ms	33 has taken a fork
-801ms	33 has taken a fork
-801ms	39 is eating
-801ms	33 is eating
-801ms	29 is thinking
-801ms	35 has taken a fork
-801ms	35 has taken a fork
-801ms	35 is eating
-801ms	66 is sleeping
-801ms	86 is sleeping
-801ms	46 is sleeping
-801ms	78 is sleeping
-801ms	19 has taken a fork
-801ms	19 has taken a fork
-801ms	19 is eating
-801ms	28 is sleeping
-801ms	88 is sleeping
-801ms	81 has taken a fork
-801ms	81 has taken a fork
-801ms	81 is eating
-801ms	21 is thinking
-801ms	21 has taken a fork
-801ms	21 has taken a fork
-801ms	21 is eating
-801ms	54 is sleeping
-801ms	34 is sleeping
-801ms	69 is thinking
-801ms	69 has taken a fork
-801ms	37 has taken a fork
-801ms	37 has taken a fork
-801ms	37 is eating
-801ms	69 has taken a fork
-801ms	45 is thinking
-801ms	87 has taken a fork
-801ms	45 has taken a fork
-801ms	44 is sleeping
-801ms	87 has taken a fork
-801ms	55 has taken a fork
-801ms	87 is eating
-801ms	47 has taken a fork
-801ms	45 has taken a fork
-801ms	45 is eating
-801ms	77 has taken a fork
-801ms	85 is thinking
-801ms	27 has taken a fork
-801ms	85 has taken a fork
-801ms	85 has taken a fork
-801ms	85 is eating
-801ms	27 has taken a fork
-801ms	27 is eating
-801ms	29 has taken a fork
-801ms	29 has taken a fork
-801ms	29 is eating
-801ms	71 has taken a fork
-801ms	71 has taken a fork
-801ms	71 is eating
-801ms	83 has taken a fork
-801ms	83 has taken a fork
-801ms	83 is eating
-801ms	67 is thinking
-801ms	72 is sleeping
-801ms	67 has taken a fork
-801ms	67 has taken a fork
-801ms	67 is eating
-801ms	68 is sleeping
-801ms	20 is sleeping
-801ms	43 has taken a fork
-801ms	43 has taken a fork
-801ms	43 is eating
-801ms	57 has taken a fork
-801ms	57 has taken a fork
-801ms	57 is eating
-801ms	69 is eating
-801ms	80 is sleeping
-801ms	77 has taken a fork
-801ms	77 is eating
-801ms	65 is thinking
-801ms	82 is sleeping
-801ms	65 has taken a fork
-801ms	31 is thinking
-801ms	31 has taken a fork
-801ms	31 has taken a fork
-801ms	31 is eating
-801ms	73 has taken a fork
-801ms	73 has taken a fork
-801ms	73 is eating
-801ms	53 has taken a fork
-801ms	53 has taken a fork
-801ms	53 is eating
-801ms	79 has taken a fork
-801ms	79 has taken a fork
-801ms	79 is eating
-801ms	47 has taken a fork
-801ms	47 is eating
-801ms	65 has taken a fork
-801ms	65 is eating
-801ms	55 has taken a fork
-801ms	55 is eating
-802ms	92 is sleeping
-802ms	96 is sleeping
-802ms	94 is sleeping
-802ms	95 is thinking
-802ms	95 has taken a fork
-802ms	95 has taken a fork
-802ms	95 is eating
-802ms	100 is sleeping
-802ms	1 has taken a fork
-802ms	1 has taken a fork
-802ms	1 is eating
-802ms	97 is thinking
-802ms	93 is thinking
-802ms	93 has taken a fork
-802ms	93 has taken a fork
-802ms	93 is eating
-802ms	99 is thinking
-802ms	91 is thinking
-802ms	89 has taken a fork
-802ms	89 has taken a fork
-802ms	89 is eating
-802ms	91 has taken a fork
-802ms	98 is sleeping
-802ms	97 has taken a fork
-802ms	97 has taken a fork
-802ms	97 is eating
-802ms	91 has taken a fork
-802ms	91 is eating
-802ms	99 has taken a fork
-802ms	99 has taken a fork
-802ms	99 is eating
-802ms	90 is sleeping
-1200ms	4 is thinking
-1200ms	14 is thinking
-1200ms	18 is thinking
-1200ms	6 is thinking
-1200ms	11 is sleeping
-1200ms	16 is thinking
-1200ms	2 is thinking
-1200ms	13 is sleeping
-1200ms	5 is sleeping
-1200ms	8 is thinking
-1200ms	17 is sleeping
-1200ms	12 is thinking
-1200ms	7 is sleeping
-1200ms	9 is sleeping
-1200ms	15 is sleeping
-1200ms	3 is sleeping
-1200ms	10 is thinking
-1201ms	80 is thinking
-1201ms	22 is thinking
-1201ms	53 is sleeping
-1201ms	58 is thinking
-1201ms	47 is sleeping
-1201ms	40 is thinking
-1201ms	18 died
-All philosophers are full
+==> rust
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> lsd
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> openvpn
+To restart openvpn after an upgrade:
+  sudo brew services restart openvpn
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/openvpn/sbin/openvpn --config /opt/homebrew/etc/openvpn/openvpn.conf
+==> samba
+To avoid conflicting with macOS system binaries, some files were installed with non-standard name:
+- smbd:     /opt/homebrew/sbin/samba-dot-org-smbd
+- profiles: /opt/homebrew/bin/samba-dot-org-profiles
+==> gobuster
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> powerlevel10k
+To activate this theme, add the following at the end of your .zshrc:
+
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+You will also need to restart your terminal for this change to take effect.
+==> bat
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> zsh-syntax-highlighting
+To activate the syntax highlighting, add the following at the end of your .zshrc:
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+If you receive "highlighters directory not found" error message,
+you may need to add the following to your .zshenv:
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+==> wireshark
+This formula only installs the command-line utilities by default.
+
+Install Wireshark.app with Homebrew Cask:
+  brew install --cask wireshark
+
+If your list of available capture interfaces is empty
+(default macOS behavior), install ChmodBPF:
+  brew install --cask wireshark-chmodbpf
+==> fzf
+To install useful keybindings and fuzzy completion:
+  /opt/homebrew/opt/fzf/install
+
+To use fzf in Vim, add the following line to your .vimrc:
+  set rtp+=/opt/homebrew/opt/fzf
+==> python@3.9
+Python has been installed as
+  /opt/homebrew/bin/python3.9
+
+Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
+`python3.9`, `python3.9-config`, `pip3.9` etc., respectively, have been installed into
+  /opt/homebrew/opt/python@3.9/libexec/bin
+
+You can install Python packages with
+  pip3.9 install <package>
+They will install into the site-package directory
+  /opt/homebrew/lib/python3.9/site-packages
+
+tkinter is no longer included with this formula, but it is available separately:
+  brew install python-tk@3.9
+
+If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
+  brew install python3
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> parallel
+To use the --csv option, the Perl Text::CSV module has to be installed.
+You can install it via:
+  perl -MCPAN -e'install Text::CSV'
+
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> espanso
+espanso is not signed and requires Accessibility access,
+so you will need to re-grant Accessibility access every time the app is updated.
+
+Enable or re-enable it in:
+  System Preferences → Security & Privacy → Privacy → Accessibility
+To re-enable, untick and retick espanso.app.
+==> wireshark-chmodbpf
+This cask will install only the ChmodBPF package from the current Wireshark
+stable install package.
+An access_bpf group will be created and its members allowed access to BPF
+devices at boot to allow unprivileged packet captures.
+This cask is not required if installing the Wireshark cask. It is meant to
+support Wireshark installed from Homebrew or other cases where unprivileged
+access to macOS packet capture devices is desired without installing the binary
+distribution of Wireshark.
+The user account used to install this cask will be added to the access_bpf
+group automatically.
+
+You must reboot for the installation of wireshark-chmodbpf to take effect.
