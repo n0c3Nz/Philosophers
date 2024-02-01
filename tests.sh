@@ -16,27 +16,27 @@ if [ -z "$is_philo" ]; then
 fi
 
 random_commands=(
-    "./Philosophers 100 800 400 401 | grep 'died'"
-    "./Philosophers 100 800 401 400 | grep 'died'"
-    "./Philosophers 100 800 400 400 | grep 'died'"
-    "./Philosophers 153 500 201 301 | grep 'died'"
-    "./Philosophers 3 500 300 201 | grep 'died'"
-    "./Philosophers 3 500 201 300 | grep 'died'"
-    "./Philosophers 3 700 301 400 | grep 'died'"
-    "./Philosophers 2 500 300 201 | grep 'died'"
-    "./Philosophers 50 700 201 500 | grep 'died'"
+    "./Philosophers 100 800 400 401 | grep 'died' -A3"
+    "./Philosophers 100 800 401 400 | grep 'died -A3"
+    "./Philosophers 100 800 400 400 | grep 'died' -A3"
+    "./Philosophers 153 500 201 301 | grep 'died' -A3"
+    "./Philosophers 3 500 300 201 | grep 'died' -A3"
+    "./Philosophers 3 500 201 300 | grep 'died' -A3"
+    "./Philosophers 3 700 301 400 | grep 'died' -A3"
+    "./Philosophers 2 500 300 201 | grep 'died' -A3"
+    "./Philosophers 50 700 201 500 | grep 'died' -A3"
 )
 moreat_commands=(
-	"./Philosophers 6 800 501 301 | grep 'died'"
-	"./Philosophers 5 800 501 300 | grep 'died'"
-	"./Philosophers 2 300 201 99 | grep 'died'"
-	"./Philosophers 60 400 301 100 | grep 'died'"
+	"./Philosophers 6 800 501 301 | grep 'died' -A3"
+	"./Philosophers 5 800 501 300 | grep 'died' -A3"
+	"./Philosophers 2 300 201 99 | grep 'died' -A3"
+	"./Philosophers 60 400 301 100 | grep 'died' -A3"
 )
 moresleep_commands=(
-	"./Philosophers 6 800 300 501 | grep 'died'"
-	"./Philosophers 5 700 200 501 | grep 'died'"
-	"./Philosophers 23 500 99 401 | grep 'died'"
-	"./Philosophers 60 900 200 701 | grep 'died'"
+	"./Philosophers 6 800 300 501 | grep 'died' -A3"
+	"./Philosophers 5 700 200 501 | grep 'died' -A3"
+	"./Philosophers 23 500 99 401 | grep 'died' -A3"
+	"./Philosophers 60 900 200 701 | grep 'died' -A3"
 )
 #for command in "${commands[@]}"; do
 #    echo -en "Ejecutando comando: $command\n"

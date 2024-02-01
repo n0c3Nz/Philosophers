@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/31 14:39:48 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:48:09 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ long int	get_time(void);
 t_data		*init_data(int argc, char **argv);
 void		*philo_routine(void *date);
 int			is_eat_count(t_philo *philo);
-void		print_message(t_philo *philo, const char *message);
+void		print_message(t_philo *philo, const char *message, int long ms);
 /*		PHILOS ACTIONS		*/
 int			sleeping(t_philo *philo);
-int			eating(t_philo *philo);
+void		eating(t_philo *philo);
 int			thinking(t_philo *philo);
 int			dead(t_philo *philo);
 void		powernap(int ms);

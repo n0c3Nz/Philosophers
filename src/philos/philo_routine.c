@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:40:23 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/01 22:21:40 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:48:31 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,14 @@ void	*philo_routine(void *dat)
 	t_philo	*philo;
 
 	philo = (t_philo *)dat;
-		if (philo->data->philo_count % 2 == 0 && philo->id % 2 == 0)
-			usleep(250);
-		else if (philo->data->philo_count % 2 != 0
-			&& philo->id % 2 == 0)
-			usleep(250);//printf("xd\n");
+	if (philo->data->philo_count % 2 == 0 && philo->id % 2 == 0)
+		usleep(50);
+	else if (philo->data->philo_count % 2 != 0
+		&& philo->id % 2 == 0)
+		usleep(50);
 	while (!(dead(philo)) && is_eat_count(philo) == 0)
 	{
-		if (eating(philo) == -1)
-			break ;
+		eating(philo);
 		if (sleeping(philo) == -1)
 			break ;
 		if (thinking(philo) == -1)

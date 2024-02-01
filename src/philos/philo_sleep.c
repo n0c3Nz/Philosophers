@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 02:57:33 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/31 20:21:51 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:34:30 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int	sleeping(t_philo *philo)
 {
+	int long	ms;
+
+	ms = (get_time() - philo->data->start);
 	if (!(dead(philo)))
 	{
-		print_message(philo, "is sleeping");
+		print_message(philo, "is sleeping", ms);
 		powernap(philo->data->time_to_sleep);
 		return (0);
 	}

@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:39:39 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/01 16:35:49 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/01 22:33:31 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	dead(t_philo *philo)
 		pthread_mutex_lock(&philo->data->dead_mutex);
 		philo->data->dead = 1;
 		pthread_mutex_unlock(&philo->data->dead_mutex);
-		print_message(philo, "died");
+		print_message(philo, "died", ms);
 		return (1);
 	}
 	return (0);
