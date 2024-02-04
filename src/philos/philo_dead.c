@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:39:39 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/01 23:12:25 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/04 22:33:43 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,13 @@ int	dead(t_philo *philo)
 		pthread_mutex_unlock(&philo->data->dead_mutex);
 	if ((ms - philo->last_eat) > philo->data->time_to_die)
 	{
+		print_message(philo, "died", ms);
 		pthread_mutex_lock(&philo->data->dead_mutex);
 		philo->data->dead = 1;
 		pthread_mutex_unlock(&philo->data->dead_mutex);
-		print_message(philo, "died", ms);
+		pthread_mutex_lock(&philo->data->print);
+		philo->data->print_ok = 1;
+		pthread_mutex_unlock(&philo->data->print);
 		return (1);
 	}
 	return (0);

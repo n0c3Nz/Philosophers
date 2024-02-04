@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/01 22:48:09 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/04 22:35:27 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_data
 	int				must_eat_count;
 	int				dead;
 	int				full_philos;
+	int				print_ok;
 	long int		start;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	print;
@@ -73,9 +74,9 @@ void		*philo_routine(void *date);
 int			is_eat_count(t_philo *philo);
 void		print_message(t_philo *philo, const char *message, int long ms);
 /*		PHILOS ACTIONS		*/
-int			sleeping(t_philo *philo);
+void		sleeping(t_philo *philo);
 void		eating(t_philo *philo);
-int			thinking(t_philo *philo);
+void		thinking(t_philo *philo);
 int			dead(t_philo *philo);
 void		powernap(int ms);
 /*		TESTS		*/

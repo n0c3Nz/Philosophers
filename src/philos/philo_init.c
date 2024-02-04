@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:11:54 by guortun-          #+#    #+#             */
-/*   Updated: 2024/01/24 19:12:23 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/04 21:43:34 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ static void	set_philos(t_data *data)
 	int	i;
 
 	i = 0;
+	data->print_ok = 0;
 	while (i < data->philo_count)
 	{
 		data->philos[i].id = i + 1;
