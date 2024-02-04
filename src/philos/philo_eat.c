@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:35:22 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/04 22:31:00 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/05 00:57:43 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,16 @@ static void	unlock_forks(t_philo *philo)
 	pthread_mutex_unlock(philo->right_fork);
 }
 
-static void	lock_forks(t_philo *philo, int long ms)
+static void	lock_forks(t_philo *philo)
 {
+	int long	ms;
+
 	pthread_mutex_lock(philo->left_fork);
-	print_message(philo, "Has taken a fork", ms);
+	ms = (get_time() - philo->data->start);
+	print_message(philo, "has taken a fork", ms);
+	ms = (get_time() - philo->data->start);
 	pthread_mutex_lock(philo->right_fork);
-	print_message(philo, "Has taken a fork", ms);
+	print_message(philo, "has taken a fork", ms);
 }
 
 void	print_message(t_philo *philo, const char *message, int long ms)
@@ -31,7 +35,7 @@ void	print_message(t_philo *philo, const char *message, int long ms)
 	pthread_mutex_lock(&philo->data->print);
 	if (!(philo->data->print_ok))
 	{
-		printf("%ldms\t%d %s\n", ms, philo->id, message);
+		printf("%ld\t%d %s\n", ms, philo->id, message);
 		pthread_mutex_unlock(&philo->data->print);
 	}
 	else
@@ -54,8 +58,8 @@ void	eating(t_philo *philo)
 {
 	int long	ms;
 
+	lock_forks(philo);
 	ms = (get_time() - philo->data->start);
-	lock_forks(philo, ms);
 	print_message(philo, "is eating", ms);
 	philo->last_eat = get_time() - philo->data->start;
 	powernap(philo->data->time_to_eat);
