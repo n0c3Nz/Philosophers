@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:11:54 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/04 21:43:34 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/02/10 22:08:32 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	set_philos(t_data *data)
 	{
 		data->philos[i].id = i + 1;
 		data->philos[i].eat_count = 0;
-		data->philos[i].last_eat = data->start;
+		data->philos[i].last_eat = 0;
 		data->philos[i].left_fork = &data->forks[i];
 		data->philos[i].right_fork = &data->forks[(i + 1) % data->philo_count];
 		data->philos[i].data = data;
