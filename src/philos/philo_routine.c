@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:40:23 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/10 21:59:18 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/03/15 16:54:09 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,22 @@ void	*philo_routine(void *dat)
 	t_philo	*philo;
 
 	philo = (t_philo *)dat;
+	if (philo->id == 1)
+	{
+		pthread_mutex_lock(&philo->data->print);
+		usleep(100);
+	}
+	else
+		pthread_mutex_lock(&philo->data->print);
+	pthread_mutex_unlock(&philo->data->print);
 	if (philo->id % 2 == 0)
 		usleep(75);
 	while (!(dead(philo)) && is_eat_count(philo) == 0)
 	{
-		eating(philo);
-		sleeping(philo);
+		if (eating(philo))
+			break ;
+		if (sleeping(philo))
+			break ;
 		thinking(philo);
 	}
 	pthread_exit(NULL);

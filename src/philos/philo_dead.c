@@ -6,20 +6,40 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:39:39 by guortun-          #+#    #+#             */
-/*   Updated: 2024/02/10 22:08:18 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:00:59 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-static void	print_dead(t_philo *philo, int long ms)
+void	print_dead(t_philo *philo, int long ms)
 {
+	pthread_mutex_lock(&philo->data->print);
 	if (philo->data->print_ok)
+	{
+		pthread_mutex_unlock(&philo->data->print);
 		return ;
+	}
+	pthread_mutex_unlock(&philo->data->print);
 	pthread_mutex_lock(&philo->data->print);
 	printf("%ld\t%d %s\n", ms, philo->id, "died");
 	philo->data->print_ok = 1;
 	pthread_mutex_unlock(&philo->data->print);
+}
+
+int self_dead(t_philo *philo, int long ms)
+{
+	//printf("COMPROBANDO %li y %i\n", ms - philo->last_eat, philo->data->time_to_die);
+	printf("COMPROBANDO %li y %i\n", ms, philo->last_eat);
+	if ((ms - philo->last_eat) > philo->data->time_to_die)
+	{
+		pthread_mutex_lock(&philo->data->dead_mutex);
+		philo->data->dead = 1;
+		pthread_mutex_unlock(&philo->data->dead_mutex);
+		print_dead(philo, ms);
+		return (1);
+	}
+	return (0);
 }
 
 int	dead(t_philo *philo)
@@ -35,13 +55,7 @@ int	dead(t_philo *philo)
 	}
 	else
 		pthread_mutex_unlock(&philo->data->dead_mutex);
-	if ((ms - philo->last_eat) > philo->data->time_to_die)
-	{
-		pthread_mutex_lock(&philo->data->dead_mutex);
-		philo->data->dead = 1;
-		pthread_mutex_unlock(&philo->data->dead_mutex);
-		print_dead(philo, ms);
+	if (self_dead(philo, ms))
 		return (1);
-	}
 	return (0);
 }
