@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:40:23 by guortun-          #+#    #+#             */
-/*   Updated: 2024/03/15 16:54:09 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/03/21 15:44:29 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void	*philo_routine(void *dat)
 			break ;
 		if (sleeping(philo))
 			break ;
-		thinking(philo);
+		if (thinking(philo))
+			break ;
 	}
-	pthread_exit(NULL);
+	return (NULL);
 }

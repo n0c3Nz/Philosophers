@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:39:39 by guortun-          #+#    #+#             */
-/*   Updated: 2024/03/15 17:00:59 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:12:28 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,9 @@ void	print_dead(t_philo *philo, int long ms)
 	pthread_mutex_unlock(&philo->data->print);
 }
 
-int self_dead(t_philo *philo, int long ms)
+int	self_dead(t_philo *philo, int long ms)
 {
-	//printf("COMPROBANDO %li y %i\n", ms - philo->last_eat, philo->data->time_to_die);
-	printf("COMPROBANDO %li y %i\n", ms, philo->last_eat);
-	if ((ms - philo->last_eat) > philo->data->time_to_die)
+	if ((ms - philo->last_eat) >= philo->data->time_to_die)
 	{
 		pthread_mutex_lock(&philo->data->dead_mutex);
 		philo->data->dead = 1;

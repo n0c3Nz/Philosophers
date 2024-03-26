@@ -6,7 +6,7 @@
 /*   By: guortun- <guortun-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 00:11:20 by guortun-          #+#    #+#             */
-/*   Updated: 2024/03/15 16:54:42 by guortun-         ###   ########.fr       */
+/*   Updated: 2024/03/21 14:58:08 by guortun-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void		print_message(t_philo *philo, const char *message, int long ms);
 /*		PHILOS ACTIONS		*/
 int			sleeping(t_philo *philo);
 int			eating(t_philo *philo);
-void		thinking(t_philo *philo);
+int			thinking(t_philo *philo);
 void		print_dead(t_philo *philo, int long ms);
 int			self_dead(t_philo *philo, int long ms);
 int			dead(t_philo *philo);
